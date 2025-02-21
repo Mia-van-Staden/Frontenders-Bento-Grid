@@ -2,41 +2,108 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Bento grid</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <title>Bento Grid</title>
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    /* General reset for consistent styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Basic page styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 1rem;
+    }
+
+    /* Grid container settings */
+    .container {
+      display: grid;
+      background-color: aliceblue;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, auto);
+      gap: 1rem;
+      width: 100%;
+      max-width: 1200px;
+      padding: 1rem;
+    }
+
+    /* Card base styling */
+    .card {
+      border-radius: 12px;
+      padding: 1.5rem;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Individual card colors */
+    .top-left { background-color: #fde7cf; }
+    .top-middle { background-color: #7b5cf9; color: #fff; }
+    .top-right { background-color: #d4c2fc; }
+    .middle-left { background-color: #fdb441; }
+    .middle-center { background-color: #fff; }
+    .middle-right { background-color: #fdb441; }
+    .bottom-left { background-color: #fff; }
+    .bottom-middle { background-color: #7b5cf9; color: #fff; }
+    .bottom-right { background-color: #fff; }
+
+    /* Typography for top-middle card */
+    .top-middle h1 { font-size: 1.8rem; font-weight: bold; }
+    .top-middle p { margin-top: 0.5rem; }
+
+    /* Responsive layout for smaller screens */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Attribution section */
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
 <body>
+  <div class="container">
+    <div class="card top-left">Create and schedule content <em>quicker</em></div>
+    <div class="card top-middle">
+      <h1>Social Media 10x Faster with AI</h1>
+      <p>★★★★★</p>
+      <p>Over 4,000 5-star reviews</p>
+    </div>
+    <div class="card top-right">Schedule to social media</div>
+    <div class="card middle-left">Write your content using AI</div>
+    <div class="card middle-center">Manage multiple accounts and platforms</div>
+    <div class="card middle-right">Maintain a consistent posting schedule</div>
+    <div class="card bottom-left">56% faster audience growth</div>
+    <div class="card bottom-middle">Grow followers with non-stop content</div>
+    <div class="card bottom-right">Follower Growth</div>
+  </div>
 
-  Social Media 10x Faster with AI
-  Over 4,000 5-star reviews
-
-  Manage multiple accounts and platforms.
-
-  Maintain a consistent posting schedule.
-
-  Schedule to social media.
-  Optimize post timings to publish content at the perfect time for your audience.
-  
-  Grow followers with non-stop content.
-
-  >56% faster audience growth
-  
-  Create and schedule content quicker.
-
-  Write your content using AI.
-  
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by Mia van Staden.
   </div>
 </body>
 </html>
