@@ -1,165 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <title>Bento Grid</title>
-  <style>
-    /* General reset for consistent styling */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Bento Grid</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="bento-grid-parent">
+        <div class="left-column">
+          <div
+            style="--i: 0.75s"
+            class="bg-lightyellow content-card flex-center left-column-content-card slide-right top-shadow"
+          >
+            <div class="content">
+              <h2 class="h2-title">
+                Create and schedule content
+                <span class="purple-text italic">quicker.</span>
+              </h2>
+              <div>
+                <img
+                  class="content-img mt-4"
+                  src="./assets/images/illustration-create-post.webp"
+                  alt="img"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            style="--i: 0.5s"
+            class="bg-yellow content-card left-column-content-card slide-right top-shadow"
+          >
+            <div class="content ai-content">
+              <h2 class="h2-title">Write your content using AI.</h2>
+              <div>
+                <img
+                  class="ai-content-img"
+                  src="./assets/images/illustration-ai-content.webp"
+                  alt="img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-column">
+          <div class="top-right-row">
+            <div class="long-column long-content-column">
+              <div
+                style="--i: 1s"
+                class="content-card bg-purple white-text text-center social-media-content slide-down bottom-shadow"
+              >
+                <h1 class="giant-h1">
+                  Social Media <span class="yellow-text">10x</span>
+                  <em>Faster</em> with AI
+                </h1>
+                <div>
+                  <div>
+                    <img
+                      class="content-img stars-img"
+                      src="./assets/images/illustration-five-stars.webp"
+                      alt=""
+                    />
+                  </div>
+                  <p>Over 4,000 5-star reviews</p>
+                </div>
+              </div>
+              <div class="long-column-bottom-row">
+                <div
+                  style="--i: 1s"
+                  class="content-card bg-white multiple-accounts-content slide-up top-shadow"
+                >
+                  <div class="multiple-accounts-img-div">
+                    <img
+                      class="content-img multiple-accounts-img"
+                      src="./assets/images/illustration-multiple-platforms.webp"
+                      alt=""
+                    />
+                  </div>
+                  <h2 class="h2-title">
+                    Manage multiple accounts and platforms
+                  </h2>
+                </div>
+                <div
+                  style="--i: 1.25s"
+                  class="content-card bg-yellow slide-down bottom-shadow"
+                >
+                  <h2 class="h2-title">
+                    Maintain a consistent posting schedule
+                  </h2>
+                  <div class="consistent-schedule-div">
+                    <img
+                      class="content-img consistent-schedule-img"
+                      src="./assets/images/illustration-consistent-schedule.webp"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              style="--i: 1.5s"
+              class="small-column content-card bg-lightpurple slide-left bottom-shadow"
+            >
+              <div class="content social-media-content">
+                <h3 class="h3-title">Schedule to social media</h3>
+                <div class="social-media-img-div">
+                  <img
+                    class="social-media-img"
+                    src="./assets/images/illustration-schedule-posts.webp"
+                    alt=""
+                  />
+                </div>
+                <p>
+                  Optimize post timings to publish content at the perfect time
+                  for your audience.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bottom-right-row">
+            <div
+              style="--i: 1s"
+              class="small-column content-card bg-white slide-right top-shadow"
+            >
+              <div class="content fastest-growth-content">
+                <h1 class="h1-title semi-bold">> 56%</h1>
+                <p>faster audience growth</p>
+                <div>
+                  <img
+                    class="content-img"
+                    src="./assets/images/illustration-audience-growth.webp"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              style="--i: 2s"
+              class="long-column bg-purple content-card white-text slide-left bottom-shadow"
+            >
+              <div class="content grow-followers-content">
+                <div>
+                  <img
+                    class="content-img"
+                    src="./assets/images/illustration-grow-followers.webp"
+                    alt=""
+                  />
+                </div>
+                <h2 class="h2-title">Grow followers with non-stop content.</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    /* Basic page styling */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f7f7f7;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 1rem;
-    }
-
-    /* Grid container settings */
-    .container {
-      display: grid;
-      background-color: aliceblue;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, auto);
-      gap: 1rem;
-      width: 100%;
-      max-width: 1200px;
-      padding: 1rem;
-    }
-
-    /* Card base styling */
-    .card {
-      border-radius: 12px;
-      padding: 1.5rem;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    /* Individual card colors */
-    .top-left { 
-      background-color: #fde7cf; 
-      border-radius: 5px;
-    }
-
-    .top-middle { 
-      background-color: #7b5cf9; 
-      color: #fff; 
-      border-radius: 5px;
-    }
-
-    .top-right { 
-      background-color: #d4c2fc; 
-      border-radius: 5px;
-      height: 400px;
-      width: 300px;
-    }
-
-    .top-right img{
-      height: 200px;
-      width: 250px;
-      border-radius: 10px;
-      
-    }
-
-    .middle-left { 
-      background-color: #fdb441; 
-      border-radius: 5px;
-      height: auto;
-    }
-
-    .middle-center { 
-      background-color: #fff; 
-      border-radius: 5px;
-      height: auto;
-    }
-
-    .middle-right { 
-      background-color: #fdb441; 
-      border-radius: 5px;
-      height: auto;
-    }
-
-    .bottom-left { 
-      background-color: #fff; 
-      border-radius: 5px;
-      height: auto;
-    }
-
-    .bottom-middle { 
-      background-color: #7b5cf9; color: #fff; 
-      border-radius: 5px;
-      height: auto;
-    }
-
-    .bottom-right { 
-      background-color: #fff; 
-      border-radius: 5px;
-      height: auto;
-    }
-
-    /* Typography for top-middle card */
-    .top-middle h1 { font-size: 1.8rem; font-weight: bold; }
-    .top-middle p { margin-top: 0.5rem; }
-
-    /* Responsive layout for smaller screens */
-    @media (max-width: 768px) {
-      .container {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    /* Attribution section */
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-      position: fixed;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="card top-left">Create and schedule content <em>quicker</em></div>
-    <div class="card top-middle">
-      <h1>Social Media 10x Faster with AI</h1>
-      <p>★★★★★</p>
-      <p>Over 4,000 5-star reviews</p>
+      <div class="attribution">
+        <p>
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge"
+            >Frontend Mentor</a
+          >. Coded by
+          Mia van Staden
+        </p>
+      </div>
     </div>
-
-    <div class="card top-right">
-      <h1>Schedule to social media</h1>
-      <img src="assets/images/illustration-schedule-posts.webp" alt="">
-    </div>
-
-    <div class="card middle-left">Write your content using AI</div>
-    <div class="card middle-center">Manage multiple accounts and platforms</div>
-    <div class="card middle-right">Maintain a consistent posting schedule</div>
-    <div class="card bottom-left">56% faster audience growth</div>
-    <div class="card bottom-middle">Grow followers with non-stop content</div>
-    <div class="card bottom-right">Follower Growth</div>
-  </div>
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by Mia van Staden.
-  </div>
-</body>
+  </body>
 </html>
